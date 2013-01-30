@@ -4,13 +4,102 @@ html, body {
 }
 .navbar {
   margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 980px;
 }
+
+.navbar-inner {
+	background: rgb(5,33,15); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA1MjEwZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjI2MTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(5,33,15,1) 0%, rgba(15,38,23,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(5,33,15,1)), color-stop(100%,rgba(15,38,23,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(5,33,15,1) 0%,rgba(15,38,23,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(5,33,15,1) 0%,rgba(15,38,23,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(5,33,15,1) 0%,rgba(15,38,23,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(5,33,15,1) 0%,rgba(15,38,23,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05210f', endColorstr='#0f2617',GradientType=0 ); /* IE6-8 */
+
+	padding-left: 20px;
+	padding-right: 20px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.navbar .nav > li > a {
+	float: none;
+	padding: 10px 10px 11px;
+	line-height: 19px;
+	color: rgb(245, 245, 245);
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(202, 68, 68, 0.25);
+}
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+	color: rgb(252, 249, 191);
+	text-decoration: none;
+	background-color: rgb(14, 34, 11);
+}
+
 .container > footer {
   margin-top: 20px;
 }
 .container > footer p {
   text-align: center; /* center align it with the container */
 }
+
+.article {
+	margin-left: 0;
+}
+
+.about {
+	margin-left: 20px;
+	margin-right: -20px;
+	margin-top: -20px;
+	padding: 20px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+	
+	border: 1px solid #666666;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;      
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.pagination {
+	text-align: center;
+}
+ .pagination .previous {
+	float: left;
+	padding: 0;
+	line-height: normal;
+	text-decoration: none;
+	border: 0;
+	border-left-width: 0;
+ }
+ 
+ .pagination .next {
+	float: right;
+	padding: 0;
+	line-height: normal;
+	text-decoration: none;
+	border: 0;
+	border-left-width: 0;
+ }
+ .pagination .page_number {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	color: rgb(148, 148, 148);
+ }
 
 /* The white background content wrapper */
 .content {
@@ -20,16 +109,16 @@ html, body {
   -webkit-border-radius: 0 0 6px 6px;
      -moz-border-radius: 0 0 6px 6px;
           border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  /*-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15); */
+          /*box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
 }
 
 /* Page header tweaks */
 .page-header {
   background-color: #f5f5f5;
   padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
+  margin: -20px -20px 20px 0px
 }
 
 .topbar .btn {
