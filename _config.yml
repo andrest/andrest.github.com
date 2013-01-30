@@ -38,15 +38,15 @@ JB :
   # Links in your website should always be prefixed with {{BASE_PATH}}
   # however this value will be dynamically changed depending on your deployment situation.
   #
-   CNAME (http://andrestuul.com)
+  #CNAME (http://andrestuul.com)
   #   DO NOT SET BASE_PATH 
   #   (urls will be prefixed with "/" and work relatively)
   #
-  GitHub Pages (http://andrest.github.com)
+  #GitHub Pages (http://andrest.github.com)
   #   DO NOT SET BASE_PATH 
   #   (urls will be prefixed with "/" and work relatively)
   #
-   GitHub Project Pages (http://andrest.github.com/andrest.github.com)
+  #GitHub Project Pages (http://andrest.github.com/andrest.github.com)
   #
   #   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
   #  REQUIRED! Set BASE_PATH to: http://username.github.com/project-name
