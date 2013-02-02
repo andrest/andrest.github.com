@@ -15,7 +15,7 @@ title: The Web Presence of Andres Tuul
 			  </p>
 			  <div class="content">
 					{{ post.content }}
-					<fb:comments-count href="{{ BASE_PATH | append: post.url }}"></fb:comments-count> comments
+					<fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count> comments
 			  </div>
 			</div>
 		{% endfor %}
