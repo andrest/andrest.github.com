@@ -14,7 +14,8 @@ title: The Web Presence of Andres Tuul
 				<span class="date">{{post.date}}</span>
 			  </p>
 			  <div class="content">
-				{{ post.content }}
+					{{ post.content }}
+					<fb:comments-count href="{{ BASE_PATH + post.url }}"></fb:comments-count>
 			  </div>
 			</div>
 		{% endfor %}
