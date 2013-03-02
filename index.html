@@ -12,6 +12,33 @@ title: The Web Presence of Andres Tuul
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+
+    //The .on function will attach the event to all current
+    // elements that match the selector and all future elements
+    // that will match the selector
+    $(document).on('DOMNodeInserted', 'fb:comments-count', function() {
+				if (e.srcElement.className == "comments") {
+						var commentCount = parseInt(e.srcElement.textContent);
+						var comments = "no comments"
+						if (commentCount > 1) {
+								var comments = "comments";    
+						} else if (commentCount == 1) {
+								var comments = "comment";    
+						}
+						$(e.srcElement).append(" " + comments);
+			}
+    });
+
+});
+
+
+</script>
+
 <div class="row">
 	<div class="span9">
 		{% for post in paginator.posts %}
@@ -23,7 +50,8 @@ title: The Web Presence of Andres Tuul
 			  </p>
 			  <div class="content">
 					{{ post.content }}
-					<fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count> comments
+
+						<a href="{{ post.url | append: "#comments" }}"><fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count></a>
 			  </div>
 			</div>
 		{% endfor %}
