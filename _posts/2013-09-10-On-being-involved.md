@@ -1,13 +1,9 @@
 ---
 layout: post
 title: "On being involved"
-description: ""
-category: 
 tags: [school, academia, philosophy]
 ---
 {% include JB/setup %}
-
-## On being involved
 
 A simple exercise of reality: whatever it is that you're studying you are not alone. Your class might consist of 100, or so, fellow students. Most of them will be graduating with you. You will be all applying for the same jobs and internships; on the desk of bigcorp HR your resume will be indistinguishable from the rest of the stack.
 
