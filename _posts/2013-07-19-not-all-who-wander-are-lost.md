@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: quote
 title: "Not all who wander are lost"
 description: ""
 category: 

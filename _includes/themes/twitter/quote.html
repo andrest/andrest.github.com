@@ -1,14 +1,14 @@
 <div class="page-header">
-	<div class="published">
-		<h4>Published</h4>
-		<div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-	</div>
-	<h1>{{ page.title }} <small></small></h1>
+	<blockquote><span class="bqstart">&#8220;</span>
+		<p class="quote">
+			{{ page.title }}
+		</p>
+	<span class="date">{{ page.date | date: "%d.%m.%Y" }}</span>
+	<span class="bqend">&#8221;</span></blockquote>
 </div>
 
 <div class="row" style="margin-left:0;padding: 0 60px;">
   <div class="">
-    {{ content }}
     <hr>
 	<div class="row">
 		<div class="about-post">

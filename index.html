@@ -21,54 +21,67 @@ $(document).ready(function(){
     //The .on function will attach the event to all current
     // elements that match the selector and all future elements
     // that will match the selector
-    $(document).on('DOMNodeInserted', 'fb:comments-count', function() {
-				if (e.srcElement.className == "comments") {
-						var commentCount = parseInt(e.srcElement.textContent);
-						var comments = "no comments"
-						if (commentCount > 1) {
-								var comments = "comments";    
-						} else if (commentCount == 1) {
-								var comments = "comment";    
-						}
-						$(e.srcElement).append(" " + comments);
-			}
+    $(document).on('DOMNodeInserted', '.fb_comments_count', function(e) {
+    	switch (parseInt(e.target.innerText)) {
+    		case 0:
+    			$(e.target.parentNode.parentNode).remove();
+    			break;
+    		case 1:
+    			$(e.target.parentNode.parentNode).append(" comment");
+    			break;
+			default:
+				$(e.target.parentNode.parentNode).append(" comments");
+				break;
+    	}
     });
 
 });
 
-
 </script>
-
 <div class="row">
-	<div class="span9">
-		{% for post in paginator.posts %}
-			<div class="span9 article">
-			   <!-- here add you post markup -->
-			   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			   <p class="author">
-				<span class="date">{{post.date}}</span>
-			  </p>
-			  <div class="content">
-					{{ post.content }}
-
-						<a href="{{ post.url | append: "#comments" }}"><fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count></a>
-			  </div>
-			</div>
-		{% endfor %}
-	</div>
-
-	<div class="span3">
-		<div class="about">
-		<img src="{{ BASE_PATH }}/pictures/mugshot.jpg" />
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-		</div>
+	<div class="about">
+	<img class="profile-pic" src="{{ BASE_PATH }}/pictures/mugshot.jpg" />
+	<p>Hi, my name is Andres Tuul. I'm currently studying BSc Computer Science in King's College London. I like to ask questions and this space here should come to reflect that. My interests are broad and my flights of fancy grandiose. I find that writing helps to clarify my mind and reasoning. That is the reason for this blog. I'm always looking for people to go on adventures with, so if you think we might hit it off give me a shout out</p>
 	</div>
 </div>
+
 <div class="row">
-	<div class="span9">		
+	<div class="">
+		{% for post in paginator.posts %}
+			{% case post.layout %}
+			{% when "quote" %}
+				<div class="article">		
+					<blockquote><span class="bqstart">&#8220;</span>
+					<a href="{{ post.url }}">
+						<p class="quote">
+							{{ post.title }}
+						</p>
+					</a>
+					<a class="comment-link" href="{{ post.url | append: "#comments" }}"><fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count></a>
+					<span class="date">{{ post.date | date: "%d.%m.%Y" }}</span>
+					<span class="bqend">&#8221;</span></blockquote>
+					<hr>
+				</div>
+			{% when "post" %}
+				<div class="article">
+				   <!-- here add you post markup -->
+				   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+					<span class="date">{{ post.date | date: "%d.%m.%Y" }}</span>
+				  <div class="content">
+						{{ post.content }}
+				  		<a class="comment-link" href="{{ post.url | append: "#comments" }}"><fb:comments-count href="{{ site.production_url | append: post.url }}"></fb:comments-count></a>
+				  </div>
+				  <hr>
+				</div>		
+			{% endcase %}
+		{% endfor %}
+	</div>
+</div>
+
+<div class="row">
+	<div class="pager">		
 		<!-- Pagination links -->
 		<div class="pagination">
-			<hr>
 			 {% if paginator.previous_page == 1%}
 				<a href="/" class="previous">Previous</a>
 			 {% elsif paginator.previous_page %}

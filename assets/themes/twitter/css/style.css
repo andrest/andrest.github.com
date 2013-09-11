@@ -2,11 +2,14 @@
 html, body {
   background-color: #eee;
 }
+.footer {
+	width:740px;
+}
 .navbar {
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  width: 980px;
+  width: 740px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -53,13 +56,73 @@ html, body {
 	line-height: 1;
 	color: #ffffff;
 }
-a {
+
+.bqstart {
+     float: left;
+     height: 45px;
+     margin-top: -20px;
+     /*padding-top: 45px;*/
+     margin-bottom: -50px;
+     font-size: 700%;
+     color: #FF0000;
+ }
+
+.bqend {
+ float: right;
+ height: 25px;
+ margin-top: -75px;
+ padding-top: 45px;
+ font-size: 700%;
+ color: #FF0000;
+}
+.shift {
+ position: relative;
+bottom: 0px;
+right: -72px;
+}
+blockquote {
+	position:relative;
+	border:0;
+	padding:0;
+}
+blockquote .quote {
+	margin-top: 45px;
+	margin-bottom: 70px;
+}
+blockquote a {
+	color: #7A7A7A;
+}
+.comment-link {
+	position: absolute;
+	right: 0;
+	color: #0088cc;
+}
+.date {
+	text-size:13px;
+	color: rgba(0, 0, 0, 0.4);
+}
+.quote {
+	text-align: center;
+	font-size:18px;
+	padding: 0 40px;
+}
+.page-header h1 {
+	padding: 0px 125px;
+	text-align:center;
+}
+p {
+	font-size:14px;
+}
+h1 > a {
   color: #4cb4e8;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+a:hover {
+	text-decoration: none;
 }
 .navbar .nav > li > a {
 	float: none;
@@ -82,27 +145,47 @@ a {
 }
 
 .article {
-	margin-left: 0;
+	margin-left: 20px;
+	padding: 5px 40px;
 }
 
+.about-post {
+font-size: 13px !important;
+height: 100px;
+margin-right: -20px;
+margin-top: -20px;
+margin-bottom: 30px;
+padding: 20px;
+}
 .about {
-	margin-left: 20px;
+	font-size:13px !important;
+	height:100px;
 	margin-right: -20px;
 	margin-top: -20px;
-	padding: 20px;
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1)
-	
-	border: 1px solid #666666;
+	margin-bottom: 30px;
+	padding: 15px;
+	background-color: rgba(239, 255, 174, 0);
+	-webkit-box-shadow: inset 0 0 30px rgba(197, 181, 129, 0.32);
+	box-shadow: inset 0 0 30px rgba(197, 181, 129, 0.32);
+
+}
+.profile-pic {
+	height:100%;
+	float: left;
+	margin-right:10px;
 	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;      
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border-radius:3px;
+}
+.published {
+position: absolute;
+right: 245px;
 }
 
 .pagination {
 	text-align: center;
+}
+.pager {
+	padding:0 180px;
 }
  .pagination .previous {
 	float: left;
@@ -127,12 +210,21 @@ a {
 	line-height: normal;
 	color: rgb(148, 148, 148);
  }
-
+.article > .content {
+	position: relative;
+}
+.container > .content {
+	margin:0;
+	-webkit-box-shadow:0 2px 20px rgba(0, 0, 0, 0.25),inset 0 0px 0 rgba(0, 0, 0, 0.1);
+ /*margin: 0px 100px;*/
+}
+.container {
+	width:740px;
+}
 /* The white background content wrapper */
 .content {
   background-color: #fff;
   padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 0 0 6px 6px;
      -moz-border-radius: 0 0 6px 6px;
           border-radius: 0 0 6px 6px;

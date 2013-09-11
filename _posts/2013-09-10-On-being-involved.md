@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "On being involved"
-tags: [school, academia, philosophy]
 ---
 {% include JB/setup %}
 
