@@ -14,6 +14,6 @@ Pareto's Law of Efficiency states that 20% of the work will get you 80% of the r
 
 To set yourself apart from the rest of the flock one should be different. Simple as that. Get involved with extra curriculars. Do stuff. Stuff that you're not told to do, but stuff that you want to do. Fuck failure, because there is none. Every misstep is an opportunity to recalibrate your intuition. Such that when, in later life, you do happen to deal with matters of consequence, you can make better decisions. 
 
-Chances are that there are at least a few like minded people in your institution. Maybe there are a few on your course, good for you. Join societies and clubs take classes unrelated to your course. Seek out the rest. Because doing great things requires great people.
+Chances are that there are at least a few like minded people in your institution. Maybe there are a few on your course, good for you. Join societies and clubs, take classes unrelated to your course. Seek out the rest. Because doing great things requires great people.
 
 There is no stratagem, no road to follow. To find your way is to make your own.
