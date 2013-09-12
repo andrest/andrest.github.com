@@ -151,11 +151,17 @@ a:hover {
 
 .about-post {
 font-size: 13px !important;
+color: rgb(117, 113, 113);
 height: 100px;
 margin-right: -20px;
 margin-top: -20px;
 margin-bottom: 30px;
 padding: 20px;
+}
+.about-post > p,
+.about > p {
+font-size: 13px !important;
+color: rgb(117, 113, 113);
 }
 .about {
 	font-size:13px !important;
